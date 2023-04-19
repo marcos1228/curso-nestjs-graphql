@@ -3,6 +3,10 @@ import { GraphQLModule } from '@nestjs/graphql';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 import { StudentsModule } from './modules/students/students.module';
+import { DisciplineModule } from './modules/discipline/discipline.module';
+import { ContentsModule } from './modules/contents/contents.module';
+import { LessonModule } from './modules/lesson/lesson.module';
+
 
 @Module({
   imports: [
@@ -23,6 +27,9 @@ import { StudentsModule } from './modules/students/students.module';
       sortSchema: true,
     }),
     StudentsModule,
+    DisciplineModule,
+    ContentsModule,
+    LessonModule,
   ],
   controllers: [],
   providers: [],
